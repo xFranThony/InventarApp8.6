@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Inventary_App" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your theme here -->
+        <item name="android:colorPrimary">@color/primaryGreen</item>
+        <item name="android:colorPrimaryDark">@color/backgroundGreen</item> <!-- Color de la barra de estado -->
+        <item name="android:colorAccent">@color/primaryPurple</item>
+    </style>
+
+    <style name="Theme.Inventary_App" parent="Base.Theme.Inventary_App" />
+    
+    <style name="Splash_Screen" parent="Base.Theme.Inventary_App">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
+</resources>

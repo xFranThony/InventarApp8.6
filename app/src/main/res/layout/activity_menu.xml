@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/layoutAnadirProducto"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/tvAnadirProducto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Añadir Producto"
+            android:textSize="18sp"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/ivAnadirProducto"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/anadir"
+            android:contentDescription="Añadir Producto"
+            android:padding="16dp"/>
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/layoutModificarProducto"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:background="?attr/selectableItemBackground"-->
+<!--        android:gravity="center_vertical"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/layoutAnadirProducto"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:layout_marginTop="16dp">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvModificarProducto"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Modificar Producto"-->
+<!--            android:textSize="18sp"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:paddingStart="16dp"-->
+<!--            android:paddingEnd="16dp"/>-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/ivModificarProducto"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/editar"-->
+<!--            android:contentDescription="Modificar Producto"-->
+<!--            android:padding="16dp"/>-->
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/layoutEliminarProducto"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:background="?attr/selectableItemBackground"-->
+<!--        android:gravity="center_vertical"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/layoutModificarProducto"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:layout_marginTop="16dp">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvEliminarProducto"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Eliminar Producto"-->
+<!--            android:textSize="18sp"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:paddingStart="16dp"-->
+<!--            android:paddingEnd="16dp"/>-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/ivEliminarProducto"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/expediente"-->
+<!--            android:contentDescription="Eliminar Producto"-->
+<!--            android:padding="16dp"/>-->
+<!--    </LinearLayout>-->
+
+    <LinearLayout
+        android:id="@+id/layoutMostrarProductos"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/layoutAnadirProducto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/tvMostrarProductos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Mostrar Productos"
+            android:textSize="18sp"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/ivMostrarProductos"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tarea_completada"
+            android:contentDescription="Mostrar Productos"
+            android:padding="16dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

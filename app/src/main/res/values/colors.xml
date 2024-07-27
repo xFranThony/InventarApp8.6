@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Colores principales -->
+    <color name="primaryGreen">#A8E6CF</color> <!-- Verde pastel claro -->
+    <color name="primaryPurple">#D1C4E9</color> <!-- Morado pastel claro -->
+
+    <!-- Colores secundarios -->
+    <color name="secondaryGreen">#DCEDC1</color> <!-- Verde pastel más claro -->
+    <color name="secondaryPurple">#E1BEE7</color> <!-- Morado pastel más claro -->
+
+    <!-- Colores de fondo -->
+    <color name="background">#FFFFFF</color> <!-- Blanco -->
+    <color name="backgroundGreen">#AAF485</color> <!-- Fondo verde pastel -->
+    <color name="backgroundPurple">#F3E5F5</color> <!-- Fondo morado pastel -->
+
+    <!-- Colores de texto -->
+    <color name="textPrimary">#37474F</color> <!-- Gris oscuro para texto principal -->
+    <color name="textSecondary">#757575</color> <!-- Gris medio para texto secundario -->
+    <color name="textTitle">#212121</color> <!-- Gris muy oscuro para títulos -->
+    <color name="textSubtitle">#616161</color> <!-- Gris para subtítulos -->
+    <color name="textData">#546E7A</color> <!-- Gris para datos -->
+
+    <!-- Colores de botones -->
+    <color name="buttonGreen">#81C784</color> <!-- Verde pastel para botones -->
+    <color name="buttonPurple">#BA68C8</color> <!-- Morado pastel para botones -->
+
+    <!-- Colores de bordes -->
+    <color name="borderGreen">#AED581</color> <!-- Verde pastel para bordes -->
+    <color name="borderPurple">#CE93D8</color> <!-- Morado pastel para bordes -->
+</resources>

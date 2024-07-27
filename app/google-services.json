@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "947087680913",
+    "project_id": "inventaryapp-cba0a",
+    "storage_bucket": "inventaryapp-cba0a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:947087680913:android:e9db40a3e03f370305e630",
+        "android_client_info": {
+          "package_name": "com.sky.inventary_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAb2zVy21lXnG8Tx3NHC7HqL8_XJbOtS3A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
