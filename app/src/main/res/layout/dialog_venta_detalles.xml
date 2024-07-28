@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detalles de la Venta"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvIdVenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID de la Venta:" />
+
+        <TextView
+            android:id="@+id/tvTotalVenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total de la Venta:" />
+
+        <TextView
+            android:id="@+id/tvFechaVenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha de la Venta:" />
+
+        <TextView
+            android:id="@+id/tvNombreComprador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre del Comprador:" />
+
+        <TextView
+            android:id="@+id/tvIdVendedor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID del Vendedor:" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="Cancelar" />
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="Finalizar Compra" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</ScrollView>
