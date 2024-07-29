@@ -1,11 +1,14 @@
 package com.sky.inventary_app.RV
 
+import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
+import com.sky.inventary_app.MenuActivity
 import com.sky.inventary_app.R
 import dbProductos
 
@@ -54,5 +57,13 @@ class MostrarProductosActivity : AppCompatActivity() {
                 // Manejar errores aquí
             }
     }
+
+    override fun onBackPressed() {
+        val intent = Intent(this, MenuActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+        startActivity(intent)
+        finish()
+    }
+
 }
 

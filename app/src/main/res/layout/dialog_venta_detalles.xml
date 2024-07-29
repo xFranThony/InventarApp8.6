@@ -1,71 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="16dp">
+    android:layout_height="match_parent"
+    android:background="@color/background">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@drawable/borde_fragment">
 
         <TextView
             android:id="@+id/tvTitle"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/acme"
+            android:gravity="center"
             android:text="Detalles de la Venta"
+            android:textColor="@color/textTitle"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvIdVenta"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ID de la Venta:" />
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/adamina"
+            android:text="ID de la Venta:"
+            android:textColor="@color/textTitle" />
 
         <TextView
             android:id="@+id/tvTotalVenta"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Total de la Venta:" />
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/adamina"
+            android:text="Total de la Venta:"
+            android:textColor="@color/textTitle" />
 
         <TextView
             android:id="@+id/tvFechaVenta"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Fecha de la Venta:" />
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/adamina"
+            android:text="Fecha de la Venta:"
+            android:textColor="@color/textTitle" />
 
         <TextView
             android:id="@+id/tvNombreComprador"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nombre del Comprador:" />
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/adamina"
+            android:text="Nombre del Comprador:"
+            android:textColor="@color/textTitle" />
 
         <TextView
             android:id="@+id/tvIdVendedor"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ID del Vendedor:" />
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/adamina"
+            android:text="ID del Vendedor:"
+            android:textColor="@color/textTitle" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="5dp">
+
             <Button
                 android:id="@+id/btnClose"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:text="Cancelar" />
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/buttonPurple"
+                android:fontFamily="@font/bakbak_one"
+                android:text="Cancelar"
+                android:textColor="@color/white" />
+
             <Button
                 android:id="@+id/btnSave"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:text="Finalizar Compra" />
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/buttonGreen"
+                android:fontFamily="@font/bakbak_one"
+                android:text="Finalizar Compra"
+                android:textColor="@color/white" />
         </LinearLayout>
-
-
-
     </LinearLayout>
 </ScrollView>

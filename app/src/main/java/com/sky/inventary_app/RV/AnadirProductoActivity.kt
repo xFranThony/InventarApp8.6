@@ -1,6 +1,7 @@
 package com.sky.inventary_app.RV
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
@@ -15,7 +16,9 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.firestore.FirebaseFirestore
+import com.sky.inventary_app.MenuActivity
 import com.sky.inventary_app.R
+import com.sky.inventary_app.Venta.VerVentasActivity
 import dbProductos
 import java.io.File
 import java.io.FileOutputStream
@@ -96,6 +99,7 @@ class AnadirProductoActivity : AppCompatActivity() {
                         saveImageToStorage(imageUri!!, nombreProducto)
                     }
                     Toast.makeText(this, "Producto registrado: $nombreProducto", Toast.LENGTH_LONG).show()
+                    startActivity (Intent(this, MenuActivity::class.java))
                     finish()
                 }
                 .addOnFailureListener { e ->
@@ -129,4 +133,18 @@ class AnadirProductoActivity : AppCompatActivity() {
             e.printStackTrace()
         }
     }
+
+    override fun onBackPressed() {
+        AlertDialog.Builder(this)
+            .setTitle("Confirmar")
+            .setMessage("¿Estás seguro de regresar al menú?")
+            .setPositiveButton("Sí") { _, _ ->
+                super.onBackPressed() // Llama al método original para cerrar la actividad
+                startActivity (Intent(this, MenuActivity::class.java))
+                finish()
+            }
+            .setNegativeButton("No", null)
+            .show()
+    }
+
 }

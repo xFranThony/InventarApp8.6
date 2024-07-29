@@ -4,72 +4,80 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@drawable/borde_fragment">
+    android:background="@color/background"
+    android:layout_margin="8dp">
 
     <ImageView
         android:id="@+id/ivProducto"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:scaleType="centerCrop"
-        android:contentDescription="@+id/tvNombre" />
+        android:scaleType="centerCrop" />
 
     <TextView
         android:id="@+id/tvNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:paddingTop="8dp" />
+        android:textColor="@color/textPrimary"
+        android:paddingTop="8dp"/>
 
     <TextView
         android:id="@+id/tvDescripcion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:paddingTop="4dp" />
+        android:textSize="16sp"
+        android:textColor="@color/textSecondary"
+        android:paddingTop="4dp"/>
 
     <TextView
         android:id="@+id/tvPrecioCompra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:paddingTop="4dp" />
+        android:textSize="16sp"
+        android:textColor="@color/textPrimary"
+        android:paddingTop="4dp"/>
 
     <TextView
         android:id="@+id/tvPrecioVenta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:paddingTop="4dp" />
+        android:textSize="16sp"
+        android:textColor="@color/textPrimary"
+        android:paddingTop="4dp"/>
 
     <TextView
         android:id="@+id/tvStock"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:paddingTop="4dp" />
+        android:textSize="16sp"
+        android:textColor="@color/textPrimary"
+        android:paddingTop="4dp"/>
 
     <TextView
         android:id="@+id/tvFechaCreacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:paddingTop="4dp" />
+        android:textSize="16sp"
+        android:textColor="@color/textSecondary"
+        android:paddingTop="4dp"/>
 
     <TextView
         android:id="@+id/tvCreadoPor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:paddingTop="4dp" />
+        android:textSize="16sp"
+        android:textColor="@color/textSecondary"
+        android:paddingTop="4dp"/>
 
     <ImageButton
         android:id="@+id/btnEditar"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
         android:src="@drawable/menu"
         android:background="?attr/selectableItemBackground"
-        android:layout_gravity="end"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:padding="8dp"/>
 
 </LinearLayout>

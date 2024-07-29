@@ -46,9 +46,14 @@
         android:layout_margin="16dp"
         android:hint="Nuevo nombre de Usuario"
         android:inputType="text"
+        android:textColor="@color/textSubtitle"
+        android:textColorHint="@color/textSubtitle"
+        android:fontFamily="@font/abeezee"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view1" />
+        app:layout_constraintTop_toBottomOf="@id/view1"
+        android:background="@drawable/edittext_border"
+        android:padding="10dp"/>
 
     <EditText
         android:id="@+id/etContrasena"
@@ -58,9 +63,14 @@
         android:layout_marginTop="16dp"
         android:hint="Nueva Contraseña"
         android:inputType="textPassword"
+        android:textColor="@color/textSubtitle"
+        android:textColorHint="@color/textSubtitle"
+        android:fontFamily="@font/abeezee"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etUsuario" />
+        app:layout_constraintTop_toBottomOf="@id/etUsuario"
+        android:background="@drawable/edittext_border"
+        android:padding="10dp"/>
 
     <EditText
         android:id="@+id/etConfirmarContrasena"
@@ -70,19 +80,27 @@
         android:layout_marginTop="16dp"
         android:hint="Confirmar Contraseña"
         android:inputType="textPassword"
+        android:textColor="@color/textSubtitle"
+        android:textColorHint="@color/textSubtitle"
+        android:fontFamily="@font/abeezee"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etContrasena" />
+        app:layout_constraintTop_toBottomOf="@id/etContrasena"
+        android:background="@drawable/edittext_border"
+        android:padding="10dp"/>
 
 
     <Button
         android:id="@+id/btnGuardar"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Registrarse"
+        android:layout_marginTop="16dp"
         android:backgroundTint="@color/buttonGreen"
-        app:layout_constraintTop_toBottomOf="@id/etConfirmarContrasena"
-        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/bakbak_one"
+        android:text="Registrarse"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etConfirmarContrasena" />
 </androidx.constraintlayout.widget.ConstraintLayout>

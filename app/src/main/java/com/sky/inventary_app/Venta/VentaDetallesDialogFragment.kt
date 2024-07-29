@@ -1,5 +1,6 @@
 package com.example.tuapp
 
+import android.app.Activity
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
@@ -22,6 +23,14 @@ import com.google.gson.reflect.TypeToken
 
 class VentaDetallesDialogFragment : DialogFragment() {
     private lateinit var db: FirebaseFirestore
+    private var ventaHecha: Boolean = false
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        arguments?.let {
+            ventaHecha = it.getBoolean("ventaHecha", false)
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -98,14 +107,23 @@ class VentaDetallesDialogFragment : DialogFragment() {
 
             db.collection("Ventas").document(generatedIdVenta).set(venta)
                 .addOnSuccessListener {
-                    Toast.makeText(context, "Venta registrada: $generatedIdVenta", Toast.LENGTH_LONG).show()
-                    dismiss() // Cerrar el fragmento después de guardar
+                    Toast.makeText(context, "Venta registrada:", Toast.LENGTH_LONG).show()
+                    // Enviar el resultado a la actividad
+                    sendResult(true)
+                    dismiss()
                 }
                 .addOnFailureListener { e ->
                     Toast.makeText(context, "Error al registrar la venta: ${e.message}", Toast.LENGTH_LONG).show()
                     Log.e("Firebase", "Error al registrar la venta", e)
+                    // Enviar el resultado a la actividad como false
+                    sendResult(false)
+                    dismiss()
                 }
         }
+    }
+
+    private fun sendResult(ventaHecha: Boolean) {
+        targetFragment?.onActivityResult(targetRequestCode, if (ventaHecha) Activity.RESULT_OK else Activity.RESULT_CANCELED, null)
     }
 
     private fun asignarIdVenta(callback: (String) -> Unit) {
@@ -128,8 +146,13 @@ class VentaDetallesDialogFragment : DialogFragment() {
 
     companion object {
         // Este método puede ser usado para crear una nueva instancia del dialogo
-        fun newInstance(): VentaDetallesDialogFragment {
-            return VentaDetallesDialogFragment()
+        fun newInstance(ventaHecha: Boolean): VentaDetallesDialogFragment {
+            val fragment = VentaDetallesDialogFragment()
+            val args = Bundle().apply {
+                putBoolean("ventaHecha", ventaHecha)
+            }
+            fragment.arguments = args
+            return fragment
         }
     }
 

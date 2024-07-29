@@ -1,5 +1,7 @@
 package com.sky.inventary_app.Venta
 
+import android.app.Activity
+import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -16,6 +18,7 @@ import android.widget.TextView
 import android.widget.Toast
 import com.example.tuapp.VentaDetallesDialogFragment
 import com.google.gson.Gson
+import com.sky.inventary_app.MenuActivity
 import com.sky.inventary_app.R
 import dbProductos
 
@@ -86,6 +89,7 @@ class CrearVentaActivity : AppCompatActivity() {
 
         btnFinalizarVenta.setOnClickListener {
             finalizarVenta()
+
         }
 
         verificarRecyclerViewVacio()
@@ -140,8 +144,11 @@ class CrearVentaActivity : AppCompatActivity() {
         editor.apply()
 
         // Crear una nueva instancia del dialogo con detalles
-        val dialog = VentaDetallesDialogFragment.newInstance()
+        val dialog = VentaDetallesDialogFragment.newInstance(ventaHecha = false)
+        dialog.setTargetFragment(null, REQUEST_CODE)  // Configura el fragmento objetivo para recibir el resultado
         dialog.show(supportFragmentManager, "VentaDetallesDialogFragment")
+
+
     }
 
     private fun calcularTotalVenta() {
@@ -167,4 +174,36 @@ class CrearVentaActivity : AppCompatActivity() {
             btnFinalizarVenta.isEnabled = true
         }
     }
+
+    override fun onBackPressed() {
+        AlertDialog.Builder(this)
+            .setTitle("Confirmar")
+            .setMessage("¿Estás seguro de regresar al menú?")
+            .setPositiveButton("Sí") { _, _ ->
+                super.onBackPressed() // Llama al método original para cerrar la actividad
+                startActivity (Intent(this, MenuActivity::class.java))
+                finish()
+            }
+            .setNegativeButton("No", null)
+            .show()
+    }
+    companion object {
+        private const val REQUEST_CODE = 1
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == REQUEST_CODE) {
+            if (resultCode == Activity.RESULT_OK) {
+                // La venta se realizó
+                Toast.makeText(this, "Venta completada con éxito.", Toast.LENGTH_LONG).show()
+                startActivity (Intent(this, MenuActivity::class.java))
+                finish() // Cierra la actividad
+            } else {
+                // La venta no se realizó
+            }
+        }
+    }
+
+
 }

@@ -1,6 +1,7 @@
 package com.sky.inventary_app.Venta
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -8,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.gson.Gson
 import com.sky.inventary_app.R
+import com.sky.inventary_app.RV.MostrarProductosActivity
 import dbProductos
 
 class AnadirProductoVentaActivity : AppCompatActivity() {
@@ -29,7 +31,6 @@ class AnadirProductoVentaActivity : AppCompatActivity() {
             val productoJson = Gson().toJson(producto)
             editor.putString("producto", productoJson)
             editor.apply()
-
             finish()
         }
         rvTodosProductos.layoutManager = LinearLayoutManager(this)

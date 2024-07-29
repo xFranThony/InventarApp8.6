@@ -1,6 +1,7 @@
 package com.sky.inventary_app.RV
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
@@ -15,6 +16,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.firestore.FirebaseFirestore
+import com.sky.inventary_app.MenuActivity
 import com.sky.inventary_app.R
 import dbProductos
 import java.io.File
@@ -193,5 +195,18 @@ class EditarProductoActivity : AppCompatActivity() {
         val intent = Intent(this, MostrarProductosActivity::class.java)
         startActivity(intent)
         finish()
+    }
+
+    override fun onBackPressed() {
+        AlertDialog.Builder(this)
+            .setTitle("Confirmar")
+            .setMessage("¿Estás seguro de no modficar nada?")
+            .setPositiveButton("Sí") { _, _ ->
+                super.onBackPressed() // Llama al método original para cerrar la actividad
+                startActivity (Intent(this, MostrarProductosActivity::class.java))
+                finish()
+            }
+            .setNegativeButton("No", null)
+            .show()
     }
 }

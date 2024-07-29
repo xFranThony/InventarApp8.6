@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+        <item>@font/abeezee</item>
+        <item>@font/abel</item>
+        <item>@font/abhaya_libre_bold</item>
+        <item>@font/acme</item>
+        <item>@font/adamina</item>
+        <item>@font/advent_pro_thin</item>
         <item>@font/alfa_slab_one</item>
+        <item>@font/anton</item>
+        <item>@font/bakbak_one</item>
+        <item>@font/mate</item>
+        <item>@font/mate_sc</item>
+        <item>@font/numans</item>
     </array>
 </resources>

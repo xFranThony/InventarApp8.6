@@ -3,22 +3,27 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@color/background">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/acme"
         android:text="Eliminar Producto"
+        android:textColor="@color/textTitle"
         android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_gravity="center"/>
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/adamina"
         android:text="¿Está seguro de que desea eliminar este producto?"
-        android:textSize="18sp"
-        android:layout_marginTop="16dp"/>
+        android:textColor="@color/textTitle"
+        android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,14 +36,18 @@
             android:id="@+id/btnConfirmarEliminar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Confirmar"
-            android:layout_marginEnd="8dp"/>
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/buttonGreen"
+            android:fontFamily="@font/bakbak_one"
+            android:text="Confirmar" />
 
         <Button
             android:id="@+id/btnCancelarEliminar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cancelar"
-            android:layout_marginStart="8dp"/>
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/buttonPurple"
+            android:fontFamily="@font/bakbak_one"
+            android:text="Cancelar" />
     </LinearLayout>
 </LinearLayout>

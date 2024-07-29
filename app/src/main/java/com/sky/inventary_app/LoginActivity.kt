@@ -20,6 +20,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var etContrasena: EditText
     private lateinit var btnIngresar: Button
     private lateinit var btnRegistrarse: TextView
+    //private lateinit var loadingDialog: LoadingDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         //Thread.sleep(2000)
@@ -29,6 +30,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        //loadingDialog = LoadingDialog(this)
         db = FirebaseFirestore.getInstance()
 
         etUsuario = findViewById(R.id.etUsuario)
@@ -48,6 +50,8 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, "Todos los campos son obligatorios", Toast.LENGTH_LONG).show()
                 return@setOnClickListener
             }
+            // Mostrar el diálogo de carga
+            //loadingDialog.show()
 
             verificarUsuario(nombreUsuario, password)
         }
@@ -70,6 +74,7 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
             .addOnFailureListener { exception ->
+                //loadingDialog.dismiss()
                 Toast.makeText(this, "Error al obtener los datos: ${exception.message}", Toast.LENGTH_LONG).show()
             }
     }
@@ -96,7 +101,9 @@ class LoginActivity : AppCompatActivity() {
         startActivity(intentAnadirProducto)
 
         // Iniciar MenuActivity
-        val intentMenu = Intent(this, MenuActivity::class.java)
-        startActivity(intentMenu)
+        val intent = Intent(this, MenuActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
+
     }
 }

@@ -3,5 +3,5 @@
     <solid android:color="@color/background" /> <!-- Color de fondo -->
     <stroke
         android:width="3dp"
-        android:color="@color/primaryGreen" /> <!-- Color y grosor del borde -->
+        android:color="@color/backgroundGreen" /> <!-- Color y grosor del borde -->
 </shape>

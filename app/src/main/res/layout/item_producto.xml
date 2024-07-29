@@ -3,8 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="80dp"
     android:orientation="horizontal"
-    android:layout_marginBottom="5dp"
-    android:background="@drawable/borde_producto">
+    android:background="@drawable/borde_fragment">
 
     <ImageView
         android:id="@+id/imgProducto"
@@ -29,16 +28,20 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/adamina"
             android:text="Nombre"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="@color/textTitle"/>
 
         <TextView
             android:id="@+id/tvDescripcion"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fontFamily="@font/alatsi"
             android:text="Descripción"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:textColor="@color/textTitle"/>
     </LinearLayout>
 
     <LinearLayout
@@ -53,16 +56,20 @@
             android:id="@+id/tvPrecioVenta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/adamina"
             android:text="Precio de Venta"
+            android:textAlignment="textEnd"
             android:textSize="14sp"
-            android:textAlignment="textEnd" />
+            android:textColor="@color/textTitle"/>
 
         <TextView
             android:id="@+id/tvStock"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/adamina"
             android:text="Stock"
+            android:textAlignment="textEnd"
             android:textSize="14sp"
-            android:textAlignment="textEnd" />
+            android:textColor="@color/textTitle"/>
     </LinearLayout>
 </LinearLayout>

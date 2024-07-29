@@ -1,142 +1,206 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Editar Producto"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_gravity="center"/>
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nombre"
-            android:textSize="18sp"
-            android:layout_marginTop="16dp"/>
-        <TextView
-            android:id="@+id/tvNombreProducto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" Anterior"
-            android:textSize="18sp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:gravity="right"/>
+            android:fontFamily="@font/acme"
+            android:gravity="center_horizontal"
+            android:text="Editar Producto"
+            android:textSize="30dp"
+            android:textColor="@color/textPrimary"
+            android:background="@color/backgroundGreen"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"/>
 
+        <ImageView
+            android:id="@+id/ivProducto"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:contentDescription="Imagen del producto"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_launcher_foreground" />
 
-    </LinearLayout>
-
-    <EditText
-        android:id="@+id/etNuevoNombreProducto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nuevo Nombre"
-        android:layout_marginTop="8dp"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
+        <Button
+            android:id="@+id/btnElegirImagen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Precio de Venta "
-            android:textSize="18sp"
-            android:layout_marginTop="16dp"/>
-        <TextView
-            android:id="@+id/tvPrecioVenta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text=" Anterior"
-            android:textSize="18sp"
-            android:layout_marginTop="16dp"
-            android:gravity="right"/>
-    </LinearLayout>
+            android:fontFamily="@font/abeezee"
+            android:text="Elegir Imagen"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/buttonPurple"
+            android:textColor="@color/white"/>
 
-    <EditText
-        android:id="@+id/etNuevoPrecioVenta"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nuevo Precio de Venta"
-        android:layout_marginTop="8dp"
-        android:inputType="numberDecimal"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Stock Anterior"
-            android:textSize="18sp"
-            android:layout_marginTop="16dp"/>
-        <TextView
-            android:id="@+id/tvStock"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="20dp"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/acme"
+                android:text="Nombre:"
+                android:textColor="@color/textPrimary"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvNombreProducto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/abeezee"
+                android:text="Anterior"
+                android:gravity="right"
+                android:textSize="20sp"
+                android:textColor="@color/textData" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etNuevoNombreProducto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Stock Anterior"
-            android:textSize="18sp"
+            android:fontFamily="@font/abeezee"
+            android:hint="Nuevo Nombre"
+            android:background="@drawable/edittext_border"
+            android:padding="10dp"
+            android:textColorHint="@color/textData"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="20dp"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/acme"
+                android:text="Precio de Venta:"
+                android:textColor="@color/textPrimary"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvPrecioVenta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/abeezee"
+                android:text="Anterior"
+                android:gravity="right"
+                android:textSize="20sp"
+                android:textColor="@color/textData" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etNuevoPrecioVenta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abeezee"
+            android:hint="Nuevo Precio de Venta"
+            android:background="@drawable/edittext_border"
+            android:padding="10dp"
+            android:textColorHint="@color/textData"
+            android:inputType="numberDecimal"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="20dp"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/acme"
+                android:text="Stock Anterior:"
+                android:textColor="@color/textPrimary"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvStock"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/abeezee"
+                android:text="Anterior"
+                android:gravity="right"
+                android:textSize="20sp"
+                android:textColor="@color/textData" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etNuevoStock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abeezee"
+            android:hint="Nuevo Stock"
+            android:background="@drawable/edittext_border"
+            android:padding="10dp"
+            android:textColorHint="@color/textData"
+            android:inputType="number"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
+
+        <TextView
+            android:id="@+id/tvDescripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/acme"
+            android:text="Descripción:"
+            android:textColor="@color/textPrimary"
+            android:textSize="20sp"
             android:layout_marginTop="16dp"
-            android:layout_marginStart="16dp"
-            android:gravity="right"/>
+            android:layout_marginStart="20dp"
+            android:padding="10dp"/>
 
+        <EditText
+            android:id="@+id/etNuevaDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abeezee"
+            android:hint="Nueva Descripción"
+            android:background="@drawable/edittext_border"
+            android:padding="10dp"
+            android:textColorHint="@color/textData"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
 
+        <Button
+            android:id="@+id/btnGuardarCambios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/bakbak_one"
+            android:text="Guardar Cambios"
+            android:backgroundTint="@color/buttonGreen"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"/>
     </LinearLayout>
-
-    <EditText
-        android:id="@+id/etNuevoStock"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nuevo Stock"
-        android:layout_marginTop="8dp"
-        android:inputType="number"/>
-
-    <TextView
-        android:id="@+id/tvDescripcion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Descripción"
-        android:textSize="18sp"
-        android:layout_marginTop="16dp"/>
-
-    <EditText
-        android:id="@+id/etNuevaDescripcion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nueva Descripción"
-        android:layout_marginTop="8dp"/>
-
-    <Button
-        android:id="@+id/btnElegirImagen"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Elegir Imagen"
-        android:layout_marginTop="16dp"/>
-
-    <ImageView
-        android:id="@+id/ivProducto"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="8dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_launcher_foreground"/>
-
-    <Button
-        android:id="@+id/btnGuardarCambios"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Guardar Cambios"
-        android:layout_marginTop="16dp"/>
-</LinearLayout>
+</ScrollView>

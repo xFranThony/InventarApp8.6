@@ -1,11 +1,14 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Inventary_App" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="android:colorPrimary">@color/black</item>
+        <item name="android:colorPrimaryDark">@android:color/transparent</item> <!-- Color de la barra de estado -->
+        <item name="android:colorAccent">@color/black</item>
     </style>
 
     <style name="Splash_Screen" parent="Base.Theme.Inventary_App">
         <item name="android:windowBackground">@drawable/splash_screen</item>
     </style>
+
+
 </resources>

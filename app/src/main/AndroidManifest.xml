@@ -21,6 +21,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Inventary_App"
         tools:targetApi="31">
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.sky.inventary_app.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".Venta.VerVentasActivity"
+            android:exported="false" />
         <activity
             android:name=".Venta.AnadirProductoVentaActivity"
             android:exported="false" />

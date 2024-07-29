@@ -30,4 +30,8 @@
     <!-- Colores de bordes -->
     <color name="borderGreen">#AED581</color> <!-- Verde pastel para bordes -->
     <color name="borderPurple">#CE93D8</color> <!-- Morado pastel para bordes -->
+
+    <color name="primary_color">#FF5722</color>
+    <color name="primary_dark_color">#E64A19</color>
+    <color name="accent_color">#FFC107</color>
 </resources>

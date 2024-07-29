@@ -45,10 +45,15 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:hint="Usuario"
+        android:fontFamily="@font/abeezee"
         android:inputType="text"
+        android:textColor="@color/textSubtitle"
+        android:textColorHint="@color/textSubtitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view1" />
+        app:layout_constraintTop_toBottomOf="@id/view1"
+        android:background="@drawable/edittext_border"
+        android:padding="15dp"/>
 
     <EditText
         android:id="@+id/etContrasena"
@@ -56,22 +61,30 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/abeezee"
         android:hint="Contraseña"
         android:inputType="textPassword"
+        android:textColor="@color/textSubtitle"
+        android:textColorHint="@color/textSubtitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etUsuario" />
+        app:layout_constraintTop_toBottomOf="@id/etUsuario"
+        android:background="@drawable/edittext_border"
+        android:padding="15dp"/>
 
     <Button
         android:id="@+id/btnIngresar"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Ingresar"
+        android:layout_marginTop="16dp"
         android:backgroundTint="@color/buttonGreen"
-        app:layout_constraintTop_toBottomOf="@id/etContrasena"
-        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/bakbak_one"
+        android:text="Ingresar"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etContrasena" />
 
     <TextView
         android:id="@+id/btnRegistrarse"
@@ -79,7 +92,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="¿Eres nuevo? Regístrate"
+        android:textColor="@color/textSubtitle"
         android:gravity="center_horizontal"
+        android:fontFamily="@font/abeezee"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnIngresar" />

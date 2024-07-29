@@ -1,147 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="16dp">
-
-    <TextView
-        android:id="@+id/tvtexto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="¿Qué deseas hacer?"
-        android:textSize="40dp"
-        android:gravity="center_horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <LinearLayout
-        android:id="@+id/layoutCrearVenta"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:orientation="horizontal"
-        android:background="?attr/selectableItemBackground"
-        android:gravity="center_vertical"
-        app:layout_constraintTop_toBottomOf="@id/tvtexto"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/background"
+    >
 
         <TextView
-            android:id="@+id/tvCrearVenta"
+            android:id="@+id/tvtexto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/acme"
+            android:gravity="center_horizontal"
+            android:text="¿Qué deseas hacer?"
+            android:textSize="40dp"
+            android:textColor="@color/textPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/backgroundGreen"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"/>
+
+        <LinearLayout
+            android:id="@+id/layoutCrearVenta"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Crear Venta"
-            android:textSize="18sp"
+            android:layout_height="150dp"
+            android:orientation="horizontal"
+            android:background="@drawable/borde_producto"
             android:gravity="center_vertical"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"/>
+            app:layout_constraintTop_toBottomOf="@id/tvtexto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_margin="16dp">
 
-        <ImageView
-            android:id="@+id/ivCrearVenta"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/anadir"
-            android:contentDescription="Añadir Producto"
-            android:padding="16dp"/>
-    </LinearLayout>
+            <TextView
+                android:id="@+id/tvCrearVenta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/adamina"
+                android:gravity="center"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Crear Venta"
+                android:textSize="18sp"
+                android:textColor="@color/textPrimary"/>
 
-    <LinearLayout
-        android:id="@+id/layoutVerVentas"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:orientation="horizontal"
-        android:background="?attr/selectableItemBackground"
-        android:gravity="center_vertical"
-        app:layout_constraintTop_toBottomOf="@id/layoutCrearVenta"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp">
+            <ImageView
+                android:id="@+id/ivCrearVenta"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="Añadir Producto"
+                android:padding="16dp"/>
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvVerVentas"
+        <LinearLayout
+            android:id="@+id/layoutVerVentas"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Mostrar Ventas"
-            android:textSize="18sp"
+            android:layout_height="150dp"
+            android:orientation="horizontal"
+            android:background="@drawable/borde_producto"
             android:gravity="center_vertical"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"/>
+            app:layout_constraintTop_toBottomOf="@id/layoutCrearVenta"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_margin="16dp"
+            android:textColor="@color/textPrimary">
 
-        <ImageView
-            android:id="@+id/ivVerVentas"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/tarea_completada"
-            android:contentDescription="Mostrar Productos"
-            android:padding="16dp"/>
-    </LinearLayout>
+            <TextView
+                android:id="@+id/tvVerVentas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/adamina"
+                android:gravity="center"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Mostrar Ventas"
+                android:textSize="18sp"
+                android:textColor="@color/textPrimary"/>
 
-    <LinearLayout
-        android:id="@+id/layoutAnadirProducto"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:orientation="horizontal"
-        android:background="?attr/selectableItemBackground"
-        android:gravity="center_vertical"
-        app:layout_constraintTop_toBottomOf="@id/layoutVerVentas"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp">
+            <ImageView
+                android:id="@+id/ivVerVentas"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="Mostrar Productos"
+                android:padding="16dp"/>
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvAnadirProducto"
+        <LinearLayout
+            android:id="@+id/layoutAnadirProducto"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Añadir Producto"
-            android:textSize="18sp"
+            android:layout_height="150dp"
+            android:orientation="horizontal"
+            android:background="@drawable/borde_producto"
             android:gravity="center_vertical"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"/>
+            app:layout_constraintTop_toBottomOf="@id/layoutVerVentas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_margin="16dp">
 
-        <ImageView
-            android:id="@+id/ivAnadirProducto"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/anadir"
-            android:contentDescription="Añadir Producto"
-            android:padding="16dp"/>
-    </LinearLayout>
+            <TextView
+                android:id="@+id/tvAnadirProducto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/adamina"
+                android:gravity="center"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Añadir Producto"
+                android:textSize="18sp"
+                android:textColor="@color/textPrimary"/>
 
-    <LinearLayout
-        android:id="@+id/layoutMostrarProductos"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:orientation="horizontal"
-        android:background="?attr/selectableItemBackground"
-        android:gravity="center_vertical"
-        app:layout_constraintTop_toBottomOf="@id/layoutAnadirProducto"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp">
+            <ImageView
+                android:id="@+id/ivAnadirProducto"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="Añadir Producto"
+                android:padding="16dp"/>
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvMostrarProductos"
+        <LinearLayout
+            android:id="@+id/layoutMostrarProductos"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Mostrar Productos"
-            android:textSize="18sp"
+            android:layout_height="150dp"
+            android:orientation="horizontal"
+            android:background="@drawable/borde_producto"
             android:gravity="center_vertical"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"/>
+            app:layout_constraintTop_toBottomOf="@id/layoutAnadirProducto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_margin="16dp">
 
-        <ImageView
-            android:id="@+id/ivMostrarProductos"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/tarea_completada"
-            android:contentDescription="Mostrar Productos"
-            android:padding="16dp"/>
-    </LinearLayout>
+            <TextView
+                android:id="@+id/tvMostrarProductos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/adamina"
+                android:gravity="center"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Mostrar Productos"
+                android:textSize="18sp"
+                android:textColor="@color/textPrimary"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:id="@+id/ivMostrarProductos"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="Mostrar Productos"
+                android:padding="16dp"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

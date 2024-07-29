@@ -1,67 +1,196 @@
-<!-- res/layout/activity_añadir_producto.xml -->
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tvtexto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/acme"
+        android:gravity="center_horizontal"
+        android:text="Detalles del nuevo producto"
+        android:textSize="30dp"
+        android:textColor="@color/textPrimary"
+        android:background="@color/backgroundGreen"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"/>
 
     <ImageView
         android:id="@+id/ivProducto"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
         android:contentDescription="Imagen del producto"
         android:scaleType="centerCrop"
         android:layout_gravity="center_horizontal"
         android:src="@drawable/ic_launcher_foreground" />
 
-    <Space
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"/>
-
-    <EditText
-        android:id="@+id/etNombreProducto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nombre del Producto" />
-
-    <EditText
-        android:id="@+id/etPrecioCompra"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Precio de Compra"
-        android:inputType="numberDecimal" />
-
-    <EditText
-        android:id="@+id/etPrecioVenta"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Precio de Venta"
-        android:inputType="numberDecimal" />
-
-    <EditText
-        android:id="@+id/etStock"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Stock"
-        android:inputType="number" />
-
-    <EditText
-        android:id="@+id/etDescripcion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Descripción" />
-
     <Button
         android:id="@+id/btnElegirImagen"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Elegir Imagen" />
+        android:fontFamily="@font/abeezee"
+        android:text="Elegir Imagen"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/buttonPurple"
+        android:textColor="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="20dp"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/acme"
+            android:text="Nombre:"
+            android:textColor="@color/textPrimary"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etNombreProducto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/abeezee"
+            android:hint="Obligatorio"
+            android:background="@drawable/edittext_border"
+            android:padding="10dp"
+            android:textColorHint="@color/textData"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="20dp"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/acme"
+            android:text="Precio de Compra:"
+            android:textColor="@color/textPrimary"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etPrecioCompra"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/abeezee"
+            android:hint="Obligatorio"
+            android:inputType="numberDecimal"
+            android:background="@drawable/edittext_border"
+            android:padding="10dp"
+            android:textColorHint="@color/textData"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="20dp"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/acme"
+            android:text="Precio de Venta:"
+            android:textColor="@color/textPrimary"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etPrecioVenta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/abeezee"
+            android:hint="Obligatorio"
+            android:inputType="numberDecimal"
+            android:background="@drawable/edittext_border"
+            android:padding="10dp"
+            android:textColorHint="@color/textData"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="20dp"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/acme"
+            android:text="Stock:"
+            android:textColor="@color/textPrimary"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etStock"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/abeezee"
+            android:hint="Obligatorio"
+            android:inputType="number"
+            android:background="@drawable/edittext_border"
+            android:padding="10dp"
+            android:textColorHint="@color/textData"/>
+    </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/acme"
+            android:text="Descripción:"
+            android:textColor="@color/textPrimary"
+            android:textSize="20sp"
+            android:layout_marginStart="20dp"
+            android:padding="10dp"/>
+
+        <EditText
+            android:id="@+id/etDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abeezee"
+            android:hint="Opcional"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="30dp"
+            android:textColorHint="@color/textData"/>
 
     <Button
         android:id="@+id/btnGuardarProducto"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Guardar Producto" />
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/bakbak_one"
+        android:text="Guardar Producto"
+        android:backgroundTint="@color/buttonGreen"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/white"/>
 </LinearLayout>
