@@ -18,7 +18,7 @@ import java.io.File
 class ProductosAdapter(
     private val productosList: MutableList<dbProductos>,
     private val context: Context,
-    private val onCantidadChanged: () -> Unit // Callback para cambios en la cantidad
+    private val onCantidadChanged: () -> Unit
 ) : RecyclerView.Adapter<ProductosAdapter.ProductoViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductoViewHolder {
@@ -81,14 +81,13 @@ class ProductosAdapter(
             tvPrecioVenta.text = "Precio: S/.${String.format("%.2f", producto.precioVenta)}"
             tvStock.text = "Stock: ${producto.stock} u"
 
-            // Cargar imagen desde almacenamiento
             val storageDir = File(context.getExternalFilesDir(Environment.DIRECTORY_PICTURES), "fotosProductos")
             val imageFile = File(storageDir, "${producto.nombreProducto}.jpg")
             if (imageFile.exists()) {
                 val bitmap = BitmapFactory.decodeFile(imageFile.absolutePath)
                 imgProducto.setImageBitmap(bitmap)
             } else {
-                imgProducto.setImageResource(R.drawable.ic_launcher_foreground) // Imagen de marcador de posición
+                imgProducto.setImageResource(R.drawable.ic_launcher_foreground)
             }
 
             actualizarTotalProducto()

@@ -163,4 +163,24 @@ class VentaDetallesDialogFragment : DialogFragment() {
             ViewGroup.LayoutParams.WRAP_CONTENT
         )
     }
+
+    private fun actualizarStockProductos(productos: List<Pair<dbProductos, Int>>) {
+        for ((producto, cantidadVendida) in productos) {
+            val nuevaCantidad = producto.stock - cantidadVendida
+            if (nuevaCantidad >= 0) {
+                db.collection("Productos").document(producto.idProducto)
+                    .update("stock", nuevaCantidad)
+                    .addOnSuccessListener {
+                        Log.d("VentaDetallesDialog", "Stock actualizado para el producto: ${producto.nombreProducto}")
+                    }
+                    .addOnFailureListener { e ->
+                        Log.e("VentaDetallesDialog", "Error actualizando stock para el producto: ${producto.nombreProducto}", e)
+                    }
+            } else {
+                Log.w("VentaDetallesDialog", "No hay suficiente stock para el producto: ${producto.nombreProducto}")
+            }
+        }
+    }
+
+
 }
