@@ -64,7 +64,8 @@
             android:hint="Obligatorio"
             android:background="@drawable/edittext_border"
             android:padding="10dp"
-            android:textColorHint="@color/textData"/>
+            android:textColorHint="@color/textData"
+            android:textColor="@color/textData"/>
     </LinearLayout>
 
     <LinearLayout
@@ -95,7 +96,8 @@
             android:inputType="numberDecimal"
             android:background="@drawable/edittext_border"
             android:padding="10dp"
-            android:textColorHint="@color/textData"/>
+            android:textColorHint="@color/textData"
+            android:textColor="@color/textData"/>
     </LinearLayout>
 
     <LinearLayout
@@ -126,7 +128,8 @@
             android:inputType="numberDecimal"
             android:background="@drawable/edittext_border"
             android:padding="10dp"
-            android:textColorHint="@color/textData"/>
+            android:textColorHint="@color/textData"
+            android:textColor="@color/textData"/>
     </LinearLayout>
 
     <LinearLayout
@@ -157,7 +160,8 @@
             android:inputType="number"
             android:background="@drawable/edittext_border"
             android:padding="10dp"
-            android:textColorHint="@color/textData"/>
+            android:textColorHint="@color/textData"
+            android:textColor="@color/textData"/>
     </LinearLayout>
 
 
@@ -181,7 +185,8 @@
             android:hint="Opcional"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="30dp"
-            android:textColorHint="@color/textData"/>
+            android:textColorHint="@color/textData"
+            android:textColor="@color/textData"/>
 
     <Button
         android:id="@+id/btnGuardarProducto"

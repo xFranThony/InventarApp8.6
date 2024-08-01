@@ -80,7 +80,8 @@
             android:padding="10dp"
             android:textColorHint="@color/textData"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"/>
+            android:layout_marginEnd="20dp"
+            android:textColor="@color/textData"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -123,7 +124,8 @@
             android:textColorHint="@color/textData"
             android:inputType="numberDecimal"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"/>
+            android:layout_marginEnd="20dp"
+            android:textColor="@color/textData"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -166,7 +168,8 @@
             android:textColorHint="@color/textData"
             android:inputType="number"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"/>
+            android:layout_marginEnd="20dp"
+            android:textColor="@color/textData"/>
 
         <TextView
             android:id="@+id/tvDescripcion"
@@ -190,7 +193,8 @@
             android:padding="10dp"
             android:textColorHint="@color/textData"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"/>
+            android:layout_marginEnd="20dp"
+            android:textColor="@color/textData"/>
 
         <Button
             android:id="@+id/btnGuardarCambios"

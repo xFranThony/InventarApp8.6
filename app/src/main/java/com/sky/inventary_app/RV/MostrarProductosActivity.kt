@@ -50,6 +50,8 @@ class MostrarProductosActivity : AppCompatActivity() {
                     val producto = document.toObject(dbProductos::class.java)
                     productoList.add(producto)
                 }
+                // Ordena la lista por precioCompra en orden ascendente
+                productoList.sortBy { it.precioVenta }
                 productoAdapter.notifyDataSetChanged()
                 productoAdapter.verificarListaVacia() // Actualiza la vista de lista vacía
             }
@@ -57,6 +59,7 @@ class MostrarProductosActivity : AppCompatActivity() {
                 // Manejar errores aquí
             }
     }
+
 
     override fun onBackPressed() {
         val intent = Intent(this, MenuActivity::class.java)

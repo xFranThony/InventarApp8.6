@@ -41,12 +41,16 @@ class VerVentasActivity : AppCompatActivity() {
                     val venta = document.toObject(dbVenta::class.java)
                     ventasList.add(venta)
                 }
+                // Ordena la lista por idVenta como número en orden ascendente
+                ventasList.sortBy { it.idVenta.toIntOrNull() ?: 0 }
                 ventasAdapter.notifyDataSetChanged()
             }
             .addOnFailureListener { exception ->
                 Toast.makeText(this, "Error al cargar las ventas: ${exception.message}", Toast.LENGTH_SHORT).show()
             }
     }
+
+
 
     override fun onBackPressed() {
         val intent = Intent(this, MenuActivity::class.java)

@@ -49,10 +49,13 @@ class AnadirProductoVentaActivity : AppCompatActivity() {
                     val producto = document.toObject(dbProductos::class.java)
                     todosProductosList.add(producto)
                 }
+                // Ordena la lista por precioCompra en orden ascendente
+                todosProductosList.sortBy { it.precioVenta }
                 productosDisponiblesAdapter.notifyDataSetChanged()
             }
             .addOnFailureListener { exception ->
                 // Manejar errores aquí
             }
     }
+
 }
